@@ -1,30 +1,55 @@
-import { BrowserRouter as Router } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Navbar from './Components/Navbar Components/Navbar'
-import Robo from './Components/Robo'
-import ComponentsShowcase from './Components/ComponentsShowcase'
-import Loader from './Components/Loader'
+import Loader from './Components/Loader';
+import Robo from './Components/Robo';
+import ComponentsShowcase from './Components/ComponentsShowcase';
+import Layout from './components/layout/Layout';
+// import SplitText from './components/animations/SplitText';
+import SplitTextPage from './pages/components/split-text';
+import BlurTextPage from './pages/components/blur-text';
+// ... import other component pages
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   return (
     <Router>
       <AnimatePresence mode='wait'>
-        {loading ? (
+        {/* {loading ? (
           <Loader setLoading={setLoading} key="loader" />
-        ) : (
-          <div className="bg-black min-h-screen relative">
-            <Navbar />
-            <div className="h-screen">
-              <Robo/>
-            </div>
-            <div className="relative z-10">
-              <ComponentsShowcase/>
-            </div>
-          </div>
-        )}
+        ) : ( */}
+          <Routes>
+            {/* Home route with Robo and ComponentsShowcase */}
+            <Route 
+              path="/" 
+              element={
+                <div className="bg-black min-h-screen relative">
+                  <div className="h-screen">
+                    <Robo/>
+                  </div>
+                  <div className="relative z-10">
+                    <ComponentsShowcase/>
+                  </div>
+                </div>
+              } 
+            />
+
+            {/* Documentation routes wrapped in Layout */}
+            <Route 
+              path="/components/*" 
+              element={
+                <Layout>
+                  <Routes>
+                    <Route path="/split-text" element={<SplitTextPage />} />
+                    <Route path="/blur-text" element={<BlurTextPage />} />
+                    {/* Add more component routes here */}
+                  </Routes>
+                </Layout>
+              } 
+            />
+          </Routes>
+        {/* )} */}
       </AnimatePresence>
     </Router>
   )
