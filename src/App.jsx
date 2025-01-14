@@ -17,6 +17,7 @@ import MagneticButtonPage from './pages/components/magnetic-button';
 import ShaderGradientPage from './pages/components/shader-gradient';
 import BlobGradientPage from './pages/components/blob-gradient';
 import CloudParticlesDemo from './pages/components/cloud-particles';
+import MorphingSvgPage from './pages/components/morphing-svg';
 // import AnimatedContainerPage from './pages/components/AnimatedContainer';
 // ... import other component pages
 
@@ -61,6 +62,7 @@ function App() {
                     <Route path="/magnet" element={<MagneticButtonPage/>} />
                     <Route path="/shader-gradient" element={<ShaderGradientPage/>} />
                     <Route path="/blob-gradient" element={<BlobGradientPage/>} />
+                    <Route path="/morphing-svg" element={<MorphingSvgPage/>} />
              
                     {/* Add more component routes here */}
                   </Routes>
