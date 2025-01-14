@@ -1,64 +1,145 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed w-full z-50 py-4"
-      style={{
-        background: 'rgba(0, 0, 0, 0.9)',
-        backdropFilter: 'blur(100px)',
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex-shrink-0"
-          >
+    <>
+      <motion.nav
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="fixed w-full z-40 py-4"
+        style={{
+          background: 'rgba(0, 0, 0, 0.9)',
+          backdropFilter: 'blur(10px)',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <Link to="/" className="text-white text-2xl font-bold">
               AnimateX
             </Link>
-          </motion.div>
 
-          {/* Center Navigation */}
-          <div className="flex items-center space-x-8">
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Link to="/docs" className="text-gray-400 hover:text-white transition-colors">
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link to="/docs" className="text-gray-300 hover:text-white">
                 Docs
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Link to="/components" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/components" className="text-gray-300 hover:text-white">
                 Components
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Link to="/github" className="text-gray-400 hover:text-white transition-colors">
-                GitHub
-              </Link>
-            </motion.div>
-          </div>
+              <a 
+                href="https://github.com/yourusername/animatex" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg"
+              >
+                <span>⭐</span> Star
+              </a>
+            </div>
 
-          {/* GitHub Button */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center"
-          >
-            <button className="flex items-center px-4 py-2 rounded-lg bg-zinc-800/80 text-white hover:bg-zinc-700/80 transition-colors">
-              <span className="mr-2">⭐</span>
-              <span>Star on GitHub</span>
+            {/* Mobile menu button */}
+            <button 
+              onClick={() => setIsOpen(true)}
+              className="md:hidden text-gray-300 hover:text-white"
+            >
+              <svg 
+                className="w-6 h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
             </button>
-          </motion.div>
+          </div>
         </div>
-      </div>
-    </motion.nav>
-  )
-}
+      </motion.nav>
 
-export default Navbar
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            />
+
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+              className="fixed right-0 top-0 h-full w-64 bg-gray-900 z-50 md:hidden"
+            >
+              <div className="p-4">
+                <div className="flex justify-between items-center mb-8">
+                  <h2 className="text-xl font-bold text-white">Menu</h2>
+                  <button 
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-300 hover:text-white"
+                  >
+                    <svg 
+                      className="w-6 h-6" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="space-y-4">
+                  <Link 
+                    to="/docs" 
+                    className="block text-gray-300 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Docs
+                  </Link>
+                  <Link 
+                    to="/components" 
+                    className="block text-gray-300 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Components
+                  </Link>
+                  <a 
+                    href="https://github.com/yourusername/animatex" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>⭐</span> Star on GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default Navbar;

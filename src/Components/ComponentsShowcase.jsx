@@ -155,6 +155,8 @@ const ComponentsShowcase = () => {
         </ComponentCard>
       </div>
 
+<a href="/components">
+
       <motion.div 
         className="text-center mt-12"
         initial={{ opacity: 0 }}
@@ -170,6 +172,7 @@ const ComponentsShowcase = () => {
           Browse more
         </motion.button>
       </motion.div>
+</a>
     </section>
   );
 };
