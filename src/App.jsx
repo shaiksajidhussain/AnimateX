@@ -8,6 +8,10 @@ import Layout from './components/layout/Layout';
 // import SplitText from './components/animations/SplitText';
 import SplitTextPage from './pages/components/split-text';
 import BlurTextPage from './pages/components/blur-text';
+import WaveTextPage from './pages/components/WaveTextPage';
+import ShinyTextPage from './pages/components/ShinyTextPage';
+import CountUpPage from './pages/components/CountUpPage';
+import AnimatedContainerPage from './pages/components/AnimatedContainer';
 // ... import other component pages
 
 function App() {
@@ -43,6 +47,10 @@ function App() {
                   <Routes>
                     <Route path="/split-text" element={<SplitTextPage />} />
                     <Route path="/blur-text" element={<BlurTextPage />} />
+                    <Route path="/wave-text" element={<WaveTextPage />} />
+                    <Route path="/shiny-text" element={<ShinyTextPage />} />
+                    <Route path="/count-up" element={<CountUpPage />} />
+                    <Route path="/animated-container" element={<AnimatedContainerPage />} />
                     {/* Add more component routes here */}
                   </Routes>
                 </Layout>
