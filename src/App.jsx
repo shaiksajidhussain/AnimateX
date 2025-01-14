@@ -11,7 +11,13 @@ import BlurTextPage from './pages/components/blur-text';
 import WaveTextPage from './pages/components/WaveTextPage';
 import ShinyTextPage from './pages/components/ShinyTextPage';
 import CountUpPage from './pages/components/CountUpPage';
-import AnimatedContainerPage from './pages/components/AnimatedContainer';
+import DecryptedTextPage from './pages/components/decrypted-text';
+import BlobCursorPage from './pages/components/blob-cursor';
+import MagneticButtonPage from './pages/components/magnetic-button';
+import ShaderGradientPage from './pages/components/shader-gradient';
+import BlobGradientPage from './pages/components/blob-gradient';
+import CloudParticlesDemo from './pages/components/cloud-particles';
+// import AnimatedContainerPage from './pages/components/AnimatedContainer';
 // ... import other component pages
 
 function App() {
@@ -50,7 +56,12 @@ function App() {
                     <Route path="/wave-text" element={<WaveTextPage />} />
                     <Route path="/shiny-text" element={<ShinyTextPage />} />
                     <Route path="/count-up" element={<CountUpPage />} />
-                    <Route path="/animated-container" element={<AnimatedContainerPage />} />
+                    <Route path="/decrypted-text" element={<DecryptedTextPage />} />
+                    <Route path="/blob-cursor" element={<BlobCursorPage/>} />
+                    <Route path="/magnet" element={<MagneticButtonPage/>} />
+                    <Route path="/shader-gradient" element={<ShaderGradientPage/>} />
+                    <Route path="/blob-gradient" element={<BlobGradientPage/>} />
+             
                     {/* Add more component routes here */}
                   </Routes>
                 </Layout>
