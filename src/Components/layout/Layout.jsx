@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       
       <div className="flex">
         {/* Desktop Sidebar */}
-        <div className="hidden md:block w-64 fixed h-[calc(100vh-64px)] top-16 left-0 overflow-y-auto border-r border-gray-800">
+        <div className="hidden md:block w-64 fixed h-[calc(100vh-64px)] top-16 left-0 overflow-y-auto border-r border-gray-800 overflow-x-hidden">
           <Sidebar />
         </div>
 

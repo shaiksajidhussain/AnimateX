@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ onMenuClick }) => {
   return (
@@ -26,7 +27,7 @@ const Navbar = ({ onMenuClick }) => {
               </svg>
             </button>
             
-            <h1 className="text-2xl font-bold">AnimateX</h1>
+           <Link to="/"> <h1 className="text-2xl font-bold">AnimateX</h1></Link>
           </div>
 
           <div className="flex items-center gap-4">

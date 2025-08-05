@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Loader from './Components/Loader';
 import Robo from './Components/Robo';
 import ComponentsShowcase from './Components/ComponentsShowcase';
 import Layout from './components/layout/Layout';
@@ -16,8 +14,8 @@ import BlobCursorPage from './pages/components/blob-cursor';
 import MagneticButtonPage from './pages/components/magnetic-button';
 import ShaderGradientPage from './pages/components/shader-gradient';
 import BlobGradientPage from './pages/components/blob-gradient';
-import CloudParticlesDemo from './pages/components/cloud-particles';
 import MorphingSvgPage from './pages/components/morphing-svg';
+import StringAnimationPage from './pages/components/string-animation';
 // import AnimatedContainerPage from './pages/components/AnimatedContainer';
 // ... import other component pages
 
@@ -63,6 +61,7 @@ function App() {
                     <Route path="/shader-gradient" element={<ShaderGradientPage/>} />
                     <Route path="/blob-gradient" element={<BlobGradientPage/>} />
                     <Route path="/morphing-svg" element={<MorphingSvgPage/>} />
+                    <Route path="/string-animation" element={<StringAnimationPage/>} />
              
                     {/* Add more component routes here */}
                   </Routes>

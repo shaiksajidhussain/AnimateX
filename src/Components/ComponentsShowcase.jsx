@@ -155,7 +155,7 @@ const ComponentsShowcase = () => {
         </ComponentCard>
       </div>
 
-<a href="/components">
+<a href="/components/split-text">
 
       <motion.div 
         className="text-center mt-12"

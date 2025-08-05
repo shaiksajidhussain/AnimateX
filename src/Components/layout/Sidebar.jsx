@@ -41,12 +41,13 @@ const Sidebar = () => {
         { name: "Morphing SVG", isNew: true },
         { name: "Shader Gradient", isNew: true },
         { name: "Blob Gradient", isNew: true },
+        { name: "String Animation", isNew: true },
       ]
     }
   ];
 
   return (
-    <aside className="w-64 border-r border-gray-800 p-6">
+    <aside className="w-64 border-r border-gray-800 p-6 overflow-x-hidden">
       {categories.map((category) => (
         <div key={category.title} className="mb-6">
           <h2 className="mb-2 text-lg font-semibold">{category.title}</h2>
