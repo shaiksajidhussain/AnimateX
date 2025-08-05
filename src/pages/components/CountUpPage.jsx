@@ -137,7 +137,8 @@ export default CountUp;`;
   );
 
   return (
-    <div className="max-w-4xl">
+    <div className='flex justify-center items-center'> 
+      <div className="max-w-5xl w-full">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-5xl font-bold">Count Up Animation with Scale</h1>
       </div>
@@ -175,6 +176,7 @@ export default CountUp;`;
         </div>
         <CodeBlock code={codeString} section="code" />
       </section>
+    </div>
     </div>
   );
 };

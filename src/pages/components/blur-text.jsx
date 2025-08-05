@@ -174,7 +174,8 @@ export default BlurText;`;
   };
 
   return (
-    <div className="max-w-4xl">
+    <div className='flex justify-center items-center'> 
+      <div className="max-w-5xl w-full">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-5xl font-bold">Blur Text</h1>
         <div className="flex gap-4">
@@ -243,6 +244,7 @@ export default BlurText;`;
         </div>
         <CodeBlock code={codeString} section="code" />
       </section>
+    </div>
     </div>
   );
 };

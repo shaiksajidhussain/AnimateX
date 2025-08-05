@@ -22,7 +22,7 @@ const CodeBlock = ({ code, language = 'jsx', section, copiedStates, onCopy }) =>
                   <span key={key} {...getTokenProps({ token })} />
                 ))}
               </div>
-            ))}
+            ))}       
           </pre>
         )}
       </Highlight>
@@ -183,7 +183,8 @@ export default DecryptedText;`;
   };
 
   return (
-    <div className="max-w-4xl">
+    <div className='flex justify-center items-center'> 
+      <div className="max-w-5xl w-full">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-5xl font-bold">Decrypted Text</h1>
         <div className="flex gap-4">
@@ -316,7 +317,8 @@ export default DecryptedText;`;
         />
       </section>
     </div>
-  );
+    </div>
+    );
 };
 
 export default DecryptedTextPage; 

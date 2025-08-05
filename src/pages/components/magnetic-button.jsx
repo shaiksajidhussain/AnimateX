@@ -12,7 +12,7 @@ const MagneticButtonPage = () => {
   });
 
   const [copiedStates, setCopiedStates] = useState({
-    installation: false,
+    installation: false,      
     usage: false,
     code: false
   });
@@ -145,7 +145,8 @@ export default MagneticButton;`;
   ];
 
   return (
-    <div className="max-w-4xl">
+    <div className='flex justify-center items-center'> 
+      <div className="max-w-5xl w-full">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-5xl font-bold">Magnetic Button</h1>
         <div className="flex gap-4">
@@ -309,7 +310,8 @@ export default MagneticButton;`;
         />
       </section>
     </div>
-  );
+    </div>
+    );
 };
 
 export default MagneticButtonPage; 

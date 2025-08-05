@@ -16,6 +16,10 @@ import ShaderGradientPage from './pages/components/shader-gradient';
 import BlobGradientPage from './pages/components/blob-gradient';
 import MorphingSvgPage from './pages/components/morphing-svg';
 import StringAnimationPage from './pages/components/string-animation';
+import CarouselPage from './pages/components/carousel';
+import CardSwiperPage from './pages/components/card-swiper';
+import FluidDistortionPage from './pages/components/fluid-distortion';
+
 // import AnimatedContainerPage from './pages/components/AnimatedContainer';
 // ... import other component pages
 
@@ -62,6 +66,9 @@ function App() {
                     <Route path="/blob-gradient" element={<BlobGradientPage/>} />
                     <Route path="/morphing-svg" element={<MorphingSvgPage/>} />
                     <Route path="/string-animation" element={<StringAnimationPage/>} />
+                    <Route path="/card-carousel" element={<CarouselPage/>} />
+                    <Route path="/card-swiper" element={<CardSwiperPage/>} />
+                    <Route path="/fluid-distortion" element={<FluidDistortionPage/>} />
              
                     {/* Add more component routes here */}
                   </Routes>
