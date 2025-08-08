@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import Robo from './Components/Robo';
 import ComponentsShowcase from './Components/ComponentsShowcase';
-import Layout from './components/layout/Layout';
-// import SplitText from './components/animations/SplitText';
+import Layout from './Components/layout/Layout';
+// import SplitText from './Components/animations/SplitText';
 import SplitTextPage from './pages/components/split-text';
 import BlurTextPage from './pages/components/blur-text';
 import WaveTextPage from './pages/components/WaveTextPage';
