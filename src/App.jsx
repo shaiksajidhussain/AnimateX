@@ -50,30 +50,64 @@ function App() {
 
             {/* Documentation routes wrapped in Layout */}
             <Route 
-              path="/components/*" 
-              element={
-                <Layout>
-                  <Routes>
-                    <Route path="/split-text" element={<SplitTextPage />} />
-                    <Route path="/blur-text" element={<BlurTextPage />} />
-                    <Route path="/wave-text" element={<WaveTextPage />} />
-                    <Route path="/shiny-text" element={<ShinyTextPage />} />
-                    <Route path="/count-up" element={<CountUpPage />} />
-                    <Route path="/decrypted-text" element={<DecryptedTextPage />} />
-                    <Route path="/blob-cursor" element={<BlobCursorPage/>} />
-                    <Route path="/magnet" element={<MagneticButtonPage/>} />
-                    <Route path="/shader-gradient" element={<ShaderGradientPage/>} />
-                    <Route path="/blob-gradient" element={<BlobGradientPage/>} />
-                    <Route path="/morphing-svg" element={<MorphingSvgPage/>} />
-                    <Route path="/string-animation" element={<StringAnimationPage/>} />
-                    <Route path="/card-carousel" element={<CarouselPage/>} />
-                    <Route path="/card-swiper" element={<CardSwiperPage/>} />
-                    <Route path="/fluid-distortion" element={<FluidDistortionPage/>} />
-             
-                    {/* Add more component routes here */}
-                  </Routes>
-                </Layout>
-              } 
+              path="/components/split-text" 
+              element={<Layout><SplitTextPage /></Layout>} 
+            />
+            <Route 
+              path="/components/blur-text" 
+              element={<Layout><BlurTextPage /></Layout>} 
+            />
+            <Route 
+              path="/components/wave-text" 
+              element={<Layout><WaveTextPage /></Layout>} 
+            />
+            <Route 
+              path="/components/shiny-text" 
+              element={<Layout><ShinyTextPage /></Layout>} 
+            />
+            <Route 
+              path="/components/count-up" 
+              element={<Layout><CountUpPage /></Layout>} 
+            />
+            <Route 
+              path="/components/decrypted-text" 
+              element={<Layout><DecryptedTextPage /></Layout>} 
+            />
+            <Route 
+              path="/components/blob-cursor" 
+              element={<Layout><BlobCursorPage /></Layout>} 
+            />
+            <Route 
+              path="/components/magnet" 
+              element={<Layout><MagneticButtonPage /></Layout>} 
+            />
+            <Route 
+              path="/components/shader-gradient" 
+              element={<Layout><ShaderGradientPage /></Layout>} 
+            />
+            <Route 
+              path="/components/blob-gradient" 
+              element={<Layout><BlobGradientPage /></Layout>} 
+            />
+            <Route 
+              path="/components/morphing-svg" 
+              element={<Layout><MorphingSvgPage /></Layout>} 
+            />
+            <Route 
+              path="/components/string-animation" 
+              element={<Layout><StringAnimationPage /></Layout>} 
+            />
+            <Route 
+              path="/components/card-carousel" 
+              element={<Layout><CarouselPage /></Layout>} 
+            />
+            <Route 
+              path="/components/card-swiper" 
+              element={<Layout><CardSwiperPage /></Layout>} 
+            />
+            <Route 
+              path="/components/fluid-distortion" 
+              element={<Layout><FluidDistortionPage /></Layout>} 
             />
           </Routes>
         {/* )} */}

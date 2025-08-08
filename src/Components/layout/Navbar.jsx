@@ -31,12 +31,12 @@ const Navbar = ({ onMenuClick }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="/docs" className="hidden md:block hover:text-cyan-400">
+            <Link to="/docs" className="hidden md:block hover:text-cyan-400">
               Docs
-            </a>
-            <a href="/components" className="hidden md:block hover:text-cyan-400">
+            </Link>
+            <Link to="/components" className="hidden md:block hover:text-cyan-400">
               Components
-            </a>
+            </Link>
             <a
               href="https://github.com/your-repo"
               className="flex items-center gap-2 rounded-full bg-gray-800 px-4 py-2 hover:bg-gray-700"
