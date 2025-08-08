@@ -1,4 +1,4 @@
-import StringAnimation from '../../components/animations/StringAnimation'
+import StringAnimation from '../../Components/animations/StringAnimation'
 import { useState } from 'react'
 import { Highlight, themes } from 'prism-react-renderer'
 

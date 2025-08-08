@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ShinyText from '../../components/animations/ShinyText';
+import ShinyText from '../../Components/animations/ShinyText';
 import { Highlight, themes } from 'prism-react-renderer';
 
 const ShinyTextPage = () => {

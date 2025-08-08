@@ -1,5 +1,5 @@
-import ComponentDoc from '../../components/docs/ComponentDoc'
-import SplitText from '../../components/animations/SplitText'
+import ComponentDoc from '../../Components/docs/ComponentDoc'
+import SplitText from '../../Components/animations/SplitText'
 import { useState } from 'react'
 import { Highlight, themes } from 'prism-react-renderer'
 

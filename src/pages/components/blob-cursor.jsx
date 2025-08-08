@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
-import BlobCursor from '../../components/animations/BlobCursor';
+import BlobCursor from '../../Components/animations/BlobCursor';
 import PropTypes from 'prop-types';
 
 const CodeBlock = ({ code, language = 'jsx', section, copiedStates, onCopy }) => {

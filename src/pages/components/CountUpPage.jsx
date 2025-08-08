@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CountUp from '../../components/animations/CountUp';
+import CountUp from '../../Components/animations/CountUp';
 import { Highlight, themes } from 'prism-react-renderer';
 
 const CountUpPage = () => {

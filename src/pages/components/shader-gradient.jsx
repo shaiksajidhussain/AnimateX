@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ShaderGradient from '../../components/animations/ShaderGradient';
-import CodeBlock from '../../components/shared/CodeBlock';
+import ShaderGradient from '../../Components/animations/ShaderGradient';
+import CodeBlock from '../../Components/shared/CodeBlock';
 
 const ShaderGradientPage = () => {
   const [settings, setSettings] = useState({

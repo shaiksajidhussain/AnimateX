@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
-import BlurText from '../../components/animations/BlurText';
+import BlurText from '../../Components/animations/BlurText';
 import PropTypes from 'prop-types';
 
 const BlurTextPage = () => {

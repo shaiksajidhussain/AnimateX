@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import BlobGradient from '../../components/animations/BlobGradient';
-import ColorControl from '../../components/shared/ColorController';
-import CodeBlock from '../../components/shared/CodeBlock';
+import BlobGradient from '../../Components/animations/BlobGradient';
+import ColorControl from '../../Components/shared/ColorController';
+import CodeBlock from '../../Components/shared/CodeBlock';
 
 const BlobGradientPage = () => {
   const [settings, setSettings] = useState({

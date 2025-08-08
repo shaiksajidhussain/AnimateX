@@ -1,5 +1,5 @@
-import ComponentDoc from '../../components/docs/ComponentDoc';
-import WaveText from '../../components/animations/WaveText';
+import ComponentDoc from '../../Components/docs/ComponentDoc';
+import WaveText from '../../Components/animations/WaveText';
 import { useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 

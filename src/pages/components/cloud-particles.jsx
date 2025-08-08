@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { CloudParticles } from '../../components/animations/CloudParticles'
+import { CloudParticles } from '../../Components/animations/CloudParticles'
 
 export default function CloudParticlesDemo() {
   return (

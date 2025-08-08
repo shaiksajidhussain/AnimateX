@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MagneticButton from '../../components/animations/MagneticButton';
-import CodeBlock from '../../components/shared/CodeBlock';
+import MagneticButton from '../../Components/animations/MagneticButton';
+import CodeBlock from '../../Components/shared/CodeBlock';
 
 
 

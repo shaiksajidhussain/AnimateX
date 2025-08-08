@@ -1,4 +1,4 @@
-import MorphingSvg from '../../components/animations/MorphingSvg';
+import MorphingSvg from '../../Components/animations/MorphingSvg';
 import { useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
-import DecryptedText from '../../components/animations/DecryptedText';
+import DecryptedText from '../../Components/animations/DecryptedText';
 import PropTypes from 'prop-types';
 
 const CodeBlock = ({ code, language = 'jsx', section, copiedStates, onCopy }) => {
